@@ -1,0 +1,36 @@
+### List all products
+GET http://localhost:8080/api/products
+
+### Get product by id
+GET http://localhost:8080/api/products/1
+
+### Search products by name
+GET http://localhost:8080/api/products/search?name=phone
+
+### Get max price product
+GET http://localhost:8080/api/products/max-price
+
+### Create product
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "name": "Phone",
+  "price": 699.99,
+  "category": "Electronics",
+  "description": "Basic smartphone"
+}
+
+### Update product
+PUT http://localhost:8080/api/products/1
+Content-Type: application/json
+
+{
+  "name": "Phone Pro",
+  "price": 899.99,
+  "category": "Electronics",
+  "description": "Updated model"
+}
+
+### Delete product
+DELETE http://localhost:8080/api/products/1
